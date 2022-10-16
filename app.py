@@ -5,8 +5,8 @@ import json
 import os
 
 
-endpoint = "https://ml2499-db.documents.azure.com:443/"
-key = "eENzBybN77GqV9gVlPsb9IfmiKTHJIX9q4zMF7K0Em36T3S2Xr8zAlcsODo6N6XP1808AY3Hto0vGmoKLcjRZw=="
+endpoint = os.environ.get('COSMOS_ENDPOINT')
+key = os.environ.get('COSMOS_KEY')
 client = CosmosClient(endpoint, credential = key)
 database_name = 'Tasks'
 container_name = 'Container1'
