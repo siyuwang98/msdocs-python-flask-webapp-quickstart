@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<html>
+   <body>
+     <main>
+        <div class="px-4 py-3 my-2 text-center">
+            <h1 class="display-6 fw-bold">Travel Options from {{origin}} to {{dest}}</h1>
+            <table class="col-md-6 mx-auto" style="margin-top:20px;margin-bottom:20px;font-size:20px;">
+              <tr>
+                  <td>
+                      <b>Index</b>
+                  </td>
+                  <td>
+                      <b>Price</b>
+                  </td>
+                  <td>
+                    <b>Stops</b>
+                </td>
+              </tr>
+              {% for x in data %}
+              <tr>
+                  <td>
+                      {{x.id}}
+                  </td>
+                  <td>
+                      {{x.price}}
+                  </td>
+                  <td>
+                      {{x.stops}}
+                </td>
+              </tr>
+              {% endfor %}
+          </table>
+            <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg px-4 gap-3">Back home</a>
+          </div>
+     </main>      
+   </body>
+</html>

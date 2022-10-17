@@ -10,7 +10,7 @@
         <div class="px-4 py-3 my-2 text-center">
             <h1 class="display-6 fw-bold text-primary">Welcome to Travel Plan</h1>            
           </div>
-        <form method="post" action="{{url_for('hello')}}">
+        <form method="post" action="{{url_for('results')}}">
             <div class="col-md-6 mx-auto text-center">
                 <label for="name" class="form-label fw-bold fs-5">Origin</label>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
@@ -21,7 +21,7 @@
                     <input type="text" class="form-control" id="dest" name="dest" style="max-width: 256px;">
                 </div>             
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
-                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" style="margin-top: 20px;">Submit</button>
                 </div>            
             </div>
         </form>
