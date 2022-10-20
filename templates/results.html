@@ -11,26 +11,44 @@
             <h1 class="display-6 fw-bold">Travel Options from {{origin}} to {{dest}}</h1>
             <table class="col-md-6 mx-auto" style="margin-top:20px;margin-bottom:20px;font-size:20px;">
               <tr>
-                  <td>
-                      <b>Index</b>
-                  </td>
-                  <td>
-                      <b>Price</b>
-                  </td>
-                  <td>
-                    <b>Stops</b>
+                <td>
+                  <b>Index</b>
+                </td>
+                <td>
+                  <b>Type</b>
+                </td>
+                <td>
+                  <b>Price</b>
+                </td>
+                <td>
+                  <b>Stops</b>
+                </td>
+                <td>
+                  <b>Departure</b>
+                </td>
+                <td>
+                  <b>Arrival</b>
                 </td>
               </tr>
               {% for x in data %}
               <tr>
-                  <td>
-                      {{x.id}}
-                  </td>
-                  <td>
-                      {{x.price}}
-                  </td>
-                  <td>
-                      {{x.stops}}
+                <td>
+                  {{x.id}}
+                </td>
+                <td>
+                  {{x.type}}
+                </td>
+                <td>
+                  {{x.price}}
+                </td>
+                <td>
+                  {{x.stops}}
+                </td>
+                <td>
+                  {{x.departure_time}}
+                </td>
+                <td>
+                  {{x.arrival_time}}
                 </td>
               </tr>
               {% endfor %}

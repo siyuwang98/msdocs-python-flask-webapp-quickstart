@@ -9,19 +9,27 @@
      <main>
         <div class="px-4 py-3 my-2 text-center">
             <h1 class="display-6 fw-bold text-primary">Welcome to Travel Plan</h1>            
-          </div>
+        </div>
         <form method="post" action="{{url_for('results')}}">
             <div class="col-md-6 mx-auto text-center">
                 <label for="name" class="form-label fw-bold fs-5">Origin</label>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
-                    <input type="text" class="form-control" id="origin" name="origin" style="max-width: 256px;">
+                    <select name="origin" id="origin" style="width: 150px; font-size: 20px;">
+                        <option value="Ithaca">Ithaca</option>
+                    </select>
                 </div>
                 <label for="name" class="form-label fw-bold fs-5">Destination</label>
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
-                    <input type="text" class="form-control" id="dest" name="dest" style="max-width: 256px;">
+                    <select name="dest" id="dest" style="width: 150px; font-size: 20px;">
+                        <option value="Newyork">New York</option>
+                    </select>
+                </div>  
+                <label for="date" class="form-label fw-bold fs-5">Date</label>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
+                    <input type="date" id="date" value="2022-10-21" name="date" style="width: 150px; font-size: 20px;" required>
                 </div>             
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
-                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" style="margin-top: 20px;">Submit</button>
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" style="margin-top: 2opx;">Submit</button>
                 </div>            
             </div>
         </form>
